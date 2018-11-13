@@ -9,6 +9,7 @@ class SessionController extends Controller
     public function beforeExecuteRoute()
     {
         $restricted = ["create", "store"];
+        
         $this->middleware($this->dispatcher->getActionName(), $restricted);
     }
 
