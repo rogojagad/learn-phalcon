@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link href="<?= $this->url->get('css/style.css') ?>" rel="stylesheet">
+    <script src="<?= $this->url->get('js/script.js') ?>"></script>
+        <title><?= $title ?> - My Webpage</title>
+    </head>
+
+    <body>
+        <h1>My Todo List</h1>
+
+        
+    <h2 style="color:white">My todo #<?= $todoID ?></h2>
+    <p><?= $todoContent ?></p>
+
+    </body>
+</html>
