@@ -1,6 +1,6 @@
 # Phalcon Project for Tutorial
 
-# Before Running:
+## Before Running:
 + Create *cache* folder in /app folder
 + Create *config.php* in /app/config file that returns object of *Phalcon/Config*
 ```
