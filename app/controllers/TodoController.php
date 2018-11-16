@@ -4,24 +4,13 @@ use Phalcon\Mvc\Controller;
 use Phalcon\Http\Response;
 use Phalcon\Mvc\Dispatcher;
 
-class TodoController extends Controller
+class TodoController extends BaseController
 {    
     public function beforeExecuteRoute()
     {
         $restricted = ["store", "show"];
 
-        $this->middleware($this->dispatcher->getActionName(), $restricted);
-    }
-
-    private function middleware($calledAction ,$actions)
-    {
-        if(in_array($calledAction, $actions))
-        {
-            if(! $this->session->has('auth'))
-            {
-                $this->response->redirect("login")->send();
-            }
-        }
+        $this->_middleware($this->dispatcher->getActionName(), $restricted);
     }
 
     public function initialize()

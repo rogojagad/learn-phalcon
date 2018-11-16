@@ -4,11 +4,32 @@ use Phalcon\Mvc\Controller;
 use Phalcon\Http\Response;
 use Phalcon\Mvc\Dispatcher;
 
-class UserController extends Controller
+class UserController extends BaseController
 {
+    public function beforeExecuteRoute()
+    {
+        $restricted = ['create', 'store'];
+
+        $this->_middleware($this->dispatcher->getActionName(), $restricted);
+    }
+
+    protected function _middleware($calledAction, $restrictedActions)
+    {
+        // Act as middleware to check whether the user is already log in or not
+        // Can be overridden as needed
+
+        if(in_array($calledAction, $restrictedActions))
+        {
+            if($this->session->has('auth'))
+            {
+                $this->response->redirect()->send();
+            }
+        }
+    }
+
     public function createAction()
     {
-
+        
     }
 
     public function storeAction()

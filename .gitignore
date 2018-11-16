@@ -2,6 +2,10 @@
 # Created by https://www.gitignore.io/api/composer,visualstudiocode
 # Edit at https://www.gitignore.io/?templates=composer,visualstudiocode
 
+### Phalcon ###
+/app/cache/
+/app/config/config.php
+
 ### Composer ###
 composer.phar
 /vendor/
@@ -22,3 +26,8 @@ composer.phar
 .history
 
 # End of https://www.gitignore.io/api/composer,visualstudiocode
+
+# Created by https://www.gitignore.io/api/phalcon
+# Edit at https://www.gitignore.io/?templates=phalcon
+
+# End of https://www.gitignore.io/api/phalcon

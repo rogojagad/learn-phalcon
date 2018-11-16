@@ -1,2 +1,0 @@
-    <link href="<?= $this->url->get('css/style.css') ?>" rel="stylesheet">
-    <script src="<?= $this->url->get('js/script.js') ?>"></script>
