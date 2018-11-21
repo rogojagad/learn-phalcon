@@ -2,7 +2,7 @@
 
 ## Before Running:
 + Create *cache* folder in /app folder
-+ Edit *config.php* in /app/config folder *based on your database credential*
++ Edit *config.php* in /app/config folder **based on your database credential**
 ```
 <?php
 
