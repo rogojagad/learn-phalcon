@@ -2,7 +2,7 @@
 
 ## Before Running:
 + Create *cache* folder in /app folder
-+ Create *config.php* in /app/config file that returns object of *Phalcon/Config*
++ Edit *config.php* in /app/config folder *based on your database credential*
 ```
 <?php
 
